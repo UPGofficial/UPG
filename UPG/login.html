@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPG - Log In</title>
+</head>
+<body>
+    <h1>Log In to UPG</h1>
+    <form id="loginform">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Log In</button>
+    </form>
+    <p>Not registered? <a href="register.html">Click here</a> to create an account.</p>
+    <script>
+        const loginform = document.getElementById("loginform");
+        loginform.addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+            if (username === "myusername" && password === "mypassword") {
+                alert("Login successful!");
+                window.location.href = "index.html";
+            } else {
+                alert("Incorrect username or password.");
+            }
+        });
+    </script>
+    <h2 style="border: 10px;">HOME</h2>
+    <a href="mainUPG.html">HOME</a>
+</body>
+</html>
